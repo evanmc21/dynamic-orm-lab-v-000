@@ -17,6 +17,7 @@ class InteractiveRecord
     table_info.each do |row| #iterate to collect only the name of the each column
     column_names << row["name"] #shovel collection of column names we just collected into column_names array
   end
+    column_names.compact
 end
 
 end
