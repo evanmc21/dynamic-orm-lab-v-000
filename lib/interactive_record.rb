@@ -18,6 +18,6 @@ class InteractiveRecord
     column_names << row["name"] #shovel collection of column names we just collected into column_names array
   end
     column_names.compact
-end
+  end
 
 end
