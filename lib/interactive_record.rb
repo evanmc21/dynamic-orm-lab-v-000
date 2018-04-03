@@ -20,10 +20,16 @@ class InteractiveRecord
     column_names.compact
   end
 
+  self.column_names.each do |col_name|
+    attr_accessor col_name.to_sym
+  end
+
   def initialize(options={})
     options.each do |property, value|
       self.send("#{property}=", value) #metaprogram to interpolate the name of each hash key as a method that we set equal to that key's value.
     end
   end
+
+
 
 end
