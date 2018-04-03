@@ -20,7 +20,7 @@ class InteractiveRecord
     column_names.compact
   end
 
-  self.column_names.each do |col_name|
+  self.column_names.each do |col_name| #iterating over the colummn names and set an attr_accessor for each one and convert the column name string into a symbol.
     attr_accessor col_name.to_sym
   end
 
