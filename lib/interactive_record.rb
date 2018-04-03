@@ -14,7 +14,7 @@ class InteractiveRecord
 
     table_info = DB[:conn].execute(sql)
     column_names = [] #set to empty array
-    table_info.each do |row|
-    column_names << row["name"] #shovel row into column_names array as a collection of
+    table_info.each do |row| #iterate to collect only the name of the each column
+    column_names << row["name"] #shovel collection of column names we just collected into column_names array
 
 end
