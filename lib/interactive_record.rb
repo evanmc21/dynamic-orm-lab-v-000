@@ -58,6 +58,6 @@ class InteractiveRecord
   end #dynamic and abstract af since the method does not reference the table name explicity. will return the table name associated with any given class in our program
 
   def self.find_by(attribute)
-    sql = "SELECT * FROM #{self.table_name} WHERE #{attribute.keys.to_s} = '#{attribute.values}'"
+    sql = "SELECT * FROM #{self.table_name} WHERE #{attribute.keys[0].to_s} = '#{attribute.values[0]}'"
   end
 end
