@@ -49,7 +49,7 @@ class InteractiveRecord
     self.class.column_names.each do |col_name|
       values << "'#{send(col_name)}'" unless send(col_name).nil? #sql expects each column value to be passed in single quotes
     end
-    values.join(", ")
+    values.join(", ") #joining array into a string
   end
 
 end
